@@ -1,0 +1,1119 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html,
+body {
+  font-family: var(--FF);
+  background-color: var(--BG-COLOR);
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --WX: min(80rem, 100%);
+  --PX: 1rem;
+
+  --BG-COLOR: #FFF4EB;
+
+  --FF: "Montserrat", sans-serif;
+  --COLOR: #fff;
+  --FF-BLACK: 900;
+  --FF-SEMI: 600;
+  --FF-LIGHT: 300;
+
+  --BORDER-RADIUS: 0.1rem;
+  
+  --AMARELO: #E8DA17;
+  --ROXO: #9645DF;
+  --LARANJA: #FF7500;
+  --BRANCO: #FFF;
+  --VERDE: #1DC3E0;
+
+  --BG-SETA: #D6C0B6;
+  --BG-BOTAO-EXPIROU: #4F4F4F;
+
+  --LARGURA-SLIDES: 25rem;
+  --LARGURA-DEPOIMENTOS: 25rem;
+  --LARGURA-MODULO: 25rem;
+  --LARGURA-OFERTA: 22rem;
+}
+
+/* ****************************** 
+MEDIA QUERIES MIXIN
+****************************** */
+@mixin twoxl {
+  @media screen and (min-width: 1401px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+/* ****************************** 
+ANIMAÇÕES
+****************************** */
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+/* ****************************** 
+SEÇÃO CABEÇALHO
+****************************** */
+.cabecalho {
+  min-height: 100vh;
+  position: relative;
+  
+  background-image: url("Fundo-topo-Pag-vendas-Triade-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include medium {
+    background-position-x: 60%;
+  }
+
+  @include small {
+    background-position-x: 70%;
+  }
+
+  @include xs {    
+    background-size: calc(100vh * 2.3);
+    background-position-y: 100%;
+  }
+
+  .cabecalho__degrade {
+    display: none;
+
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(0deg, var(--LARANJA), rgba(255,0,0,0));
+
+    @include xs {
+      display: block;
+    }
+  }
+
+  .cabecalho__centro {
+    z-index: 1;
+    width: var(--WX);
+    padding-inline: var(--PX);
+
+    display: flex;
+    
+    @include small {
+      height: 90vh;
+      align-items: end;
+    }
+
+    .cabecalho__caixa-titulo {
+      flex: .5;
+
+      .cabecalho__logo {
+        position: absolute;
+        top: 2vh;
+      }
+
+      .cabecalho__titulo {
+        line-height: 1;
+        
+        color: var(--ROXO);
+        font-weight: var(--FF-BLACK);
+        font-size: 5rem;
+        text-transform: uppercase;
+
+        @include medium {
+          font-size: 4rem;
+        }
+
+        @include small {
+          font-size: 3rem;
+        }
+
+        @include xs {
+          font-size: 2rem;
+        }
+        
+        .cabecalho__titulo-linha {
+          background-color: var(--AMARELO);
+          display: inline-block;
+
+          border-radius: var(--BORDER-RADIUS);
+
+          padding: 0.5rem 1.7rem;
+        }
+        
+        .cabecalho__titulo-20 {
+          position: relative;
+          
+          color: var(--LARANJA);
+          font-size: 1.2em;
+
+          small {
+            position: absolute;
+            bottom: 18.5%;
+            right: 7%;            
+
+            font-size: .3em;            
+            color: var(--AMARELO);
+
+            span {
+              font-weight: var(--FF-SEMI);
+            }
+          }
+        }
+      }
+
+      .cabecalho__subtitulo {
+        margin-top: 2rem;
+
+        color: var(--COLOR);
+        font-size: 1.2rem;
+
+        strong {
+          color: var(--AMARELO);
+          font-weight: var(--FF-BLACK);
+        }
+      }
+
+      .cabecalho__btn {
+        display: inline-block;
+        margin-top: .5rem;
+
+        border-radius: var(--BORDER-RADIUS);
+        background-color: var(--ROXO);
+        color: var(--COLOR);
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: var(--FF-SEMI);
+        transition: scale .2s;
+
+        padding: 1rem 2rem;
+      }
+
+      .cabecalho__btn:hover {
+        opacity: .92;
+        scale: 1.1;
+      }
+    }    
+  }
+}
+
+/* ****************************** 
+SEÇÃO CONTADOR
+****************************** */
+.contador {
+  background-color: var(--ROXO);
+
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+
+  .contador__caixa-contagem {
+    font-size: 2.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include small {
+      font-size: 1.8rem;
+
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .contador__descricao {
+      color: var(--AMARELO);
+      font-weight: var(--FF-BLACK);
+      text-transform: uppercase;
+      font-size: 1em;
+      line-height: 1;
+    }
+    
+    .contador__contagem {
+      display: flex;
+      gap: 1rem;
+
+      .contador__unidade {
+        position: relative;
+
+        background-color: var(--AMARELO);
+        border-radius: var(--BORDER-RADIUS);
+        
+        padding: .5rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contador__unidade-regressao {
+          color: var(--COLOR);
+          font-weight: var(--FF-BLACK);
+          font-size: 1em;
+        }
+        
+        .contador__unidade-descricao {
+          position: absolute;
+          bottom: 5%;     
+
+          font-size: 0.5em;
+          color: var(--LARANJA);
+          font-weight: var(--FF-BLACK);
+        }
+      }
+    }
+  }
+}
+
+/* ****************************** 
+SEÇÃO CARROSSEL (BENEFÍCIOS)
+****************************** */
+.carrossel {
+  padding: 10rem 0;
+  
+  display: flex;
+  justify-content: center;
+
+  .carrossel__moldura {
+    position: relative;
+
+    width: var(--LARGURA-SLIDES);
+    padding-inline: var(--PX);
+    
+    @include xs {
+      width: 100%;
+    }
+    
+    .carrossel__moldura-topo {
+      height: 4.2rem;
+      
+      background-color: var(--BRANCO);
+
+      padding-inline: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+
+      img {
+        border-radius: 100%;
+        border: 3px solid var(--ROXO);
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          font-weight: var(--FF-SEMI);
+        }
+
+        span {
+          font-weight: var(--FF-LIGHT);
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .carrossel__moldura-slide {
+      width: 100%;
+    }
+
+    .carrossel__moldura-rodape {
+      background-color: var(--BRANCO);
+      font-size: .9rem;
+
+      padding: 1rem;
+
+      strong {
+        font-weight: var(--FF-SEMI);
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.setas { 
+  position: absolute;  
+  top: 50%;  
+  left: 0px;
+  width: 100%;
+  
+  .seta {
+    position: absolute;
+
+    font-size: 3rem;
+    color: var(--LARANJA);
+    transition: scale .2s;
+  }
+
+  .seta:hover {
+    opacity: .95;
+    scale: 1.1;
+  }
+
+  .seta--esquerda {
+    left: 0;
+  }
+  
+  .seta--direita {
+    right: 0;
+  }
+}
+
+/* ****************************** 
+SEÇÃO O QUE É
+****************************** */
+.oquee {
+  background-color: var(--ROXO);
+
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: var(--WX);
+    padding-inline: var(--PX);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include medium {
+      flex-direction: column-reverse;
+    }  
+  }
+
+  .oquee__ilustracao {
+    width: 100%;
+    flex: 1;
+    display: inline-block;
+    width: 500px;
+  }
+
+  .oquee__caixa-descricao {
+    color: var(--COLOR);
+
+    .oquee__titulo {
+      margin-bottom: 1rem;
+
+      font-size: 2rem;
+      font-weight: var(--FF-BLACK);
+      text-transform: uppercase;
+    }
+
+    .oquee__resumo {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-bottom: 2rem;
+    }
+
+    .oquee__e {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+
+      .oquee__e-isso {        
+        color: var(--ROXO);
+        background-color: var(--AMARELO);
+        padding: 0.2rem 1rem;
+        border-radius: var(--BORDER-RADIUS);
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        strong {
+          font-size: 2rem;
+          font-weight: var(--FF-BLACK);
+        }
+      }
+    }
+
+  }
+}
+
+/* ****************************** 
+SEÇÃO DEPOIMENTOS
+****************************** */
+.triaders {  
+  padding: 10rem 0 5rem;
+
+  .triaders__titulo {
+    margin-bottom: 5rem;
+    
+    padding-inline: var(--PX);
+    display: flex;
+    justify-content: center;
+    
+    h2 {
+      position: relative;
+      display: inline-block;
+
+      padding: .5rem 1rem;
+      font-size: 2.5rem;
+      background-color: var(--AMARELO);
+      text-transform: uppercase;
+      font-weight: var(--FF-BLACK);
+      color: var(--ROXO);
+
+      small {
+        position: absolute;
+        bottom: -45%;
+        right: 0;
+
+        text-transform: none;
+        font-weight: var(--FF-SEMI);
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+
+  .triaders__depoimentos {
+    display: flex;
+    justify-content: center;
+
+    .triaders__depoimento {
+      position: relative;
+      padding-inline: var(--PX);
+      
+      img {
+        border-radius: var(--BORDER-RADIUS);
+      }
+    }
+  }
+}
+
+/* ****************************** 
+SEÇÃO POR DENTRO
+****************************** */
+.por-dentro {
+  padding: 10rem 0 10rem;
+  position: relative;
+  padding-inline: var(--PX);
+
+  .por-dentro__titulo {    
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    @include medium {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 6rem;
+    }
+
+    .por-dentro__ilustracao {
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    h2 {
+      position: relative;
+      min-width: 350px;
+      
+      text-align:  center;
+
+      display: inline-block;
+      padding: .5rem 1rem;
+      font-size: 3.5rem;
+      background-color: var(--LARANJA);
+      text-transform: uppercase;
+      font-weight: var(--FF-BLACK);
+      color: var(--BRANCO);
+
+      @include xs {
+        font-size: 2rem;
+        min-width: 300px;
+      }
+
+      small {
+        position: absolute;
+        bottom: -45%;
+        right: 0;
+
+        color: var(--LARANJA);
+        text-transform: none;
+        font-weight: var(--FF-SEMI);
+        font-size: .5em;
+      }
+    }
+  }
+
+  .por-dentro__modulos { 
+    display: grid;
+    grid-template-columns: repeat(3, var(--LARGURA-MODULO));
+    gap: 1rem;
+    justify-content: center;
+    
+
+    @include large {
+      grid-template-columns: repeat(2, var(--LARGURA-MODULO));
+    }
+
+    @include medium {
+      grid-template-columns: repeat(1, var(--LARGURA-MODULO));
+    }
+
+    @include xs {
+      grid-template-columns: repeat(1, 100%);
+    }
+    
+    .por-dentro__modulo {
+      width: var(--LARGURA-MODULO);
+      color: var(--BRANCO);
+      background-color: var(--ROXO);
+      padding: 2.2rem 2rem;
+      border-radius: var(--BORDER-RADIUS);
+
+      @include xs {
+        width: 100%;
+      }
+
+      .por-dentro__modulo-nome {
+        font-size: 2rem;
+        color: var(--BRANCO);
+        font-weight: var(--FF-BLACK);
+        text-align: center;
+      }
+      
+      .por-dentro__modulo-descricao {
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        color: var(--AMARELO);
+        font-weight: var(--FF-SEMI);
+      }
+
+      .por-dentro__modulo-itens {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;        
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: .3rem;
+          
+          &::before {
+            content: " ";
+            display: inline-block;
+            height: .7rem;
+            width: .7rem;
+            color: var(--AMARELO);
+            background-color: var(--AMARELO);
+            border-radius: 100%;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* ****************************** 
+SEÇÃO AUTORA
+****************************** */
+.autora {
+  background-color: var(--ROXO);
+  padding-block: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7rem;
+
+  .autora__sobre {
+    width: var(--WX);
+    padding-inline: var(--PX);    
+  
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    @include medium {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .autora__sobre-foto,
+    .autora__sobre-resumo {
+      flex: 1;
+    }
+
+    .autora__sobre-resumo {
+      @include medium {
+        text-align: center;
+      }
+
+      .autora__sobre-citacao {
+        font-size: 3rem;
+        line-height: 1;
+
+        @include medium {
+          font-size: 2.5rem;
+        }
+  
+    
+        strong {
+          font-weight: var(--FF-BLACK);
+          color: var(--AMARELO);
+        }
+  
+        .autora__sobre-citacao-atribuicao {
+          font-weight: var(--FF-LIGHT);        
+        }
+      }
+
+      .autora__sobre-descricao {
+        margin-top: 3rem;
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+  }
+
+  .autora__projetos {
+    width: var(--WX);
+    padding-inline: var(--PX);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  
+    h2 {
+      color: #ccc;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  
+    img {
+      width: 1000px;
+    }
+  }
+}
+
+
+/* ****************************** 
+SEÇÃO OFERTA
+****************************** */
+.oferta {
+  padding-block: 10rem;
+  padding-inline: var(--PX);  
+  
+  .oferta__titulo {
+    margin-bottom: 6rem;
+
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      position: relative;
+
+      display: inline-block;
+      padding: .5rem 1rem;
+      font-size: 2.5rem;
+      background-color: var(--AMARELO);
+      text-transform: uppercase;
+      font-weight: var(--FF-BLACK);
+      color: var(--ROXO);
+      text-align: center;
+
+      
+      small {
+        position: absolute;
+        bottom: -45%;
+        right: 0;
+
+        text-transform: none;
+        font-weight: var(--FF-SEMI);
+        font-size: 50%;
+
+        @include xs {
+          bottom: -25%;
+        }
+      }
+    }
+  }  
+
+  .oferta__lotes {
+    display: flex;    
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .oferta__lote {
+      width: var(--LARGURA-OFERTA);
+      background-color: var(--ROXO);
+
+      .oferta__lote-termino {
+        background-color: var(--AMARELO);
+        font-size: 1.3rem;
+        font-weight: var(--FF-BLACK);
+        color: var(--ROXO);
+        text-transform: uppercase;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .oferta__lote-detalhes {
+        background-color: var(--ROXO);
+        padding: 2rem 1.5rem 1rem;
+        color: var(--BRANCO);
+
+        .oferta__lote-itens-inclusos {
+          display: flex;
+          flex-direction: column;
+          gap: .3rem;
+
+          li:not(.oferta__lote-item-bonus) {
+            font-weight: var(--FF-BLACK);
+          }          
+
+          .oferta__lote-item-bonus {
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+
+            &::before {
+              content: " ";
+              display: inline-block;
+              height: .7rem;
+              width: .7rem;
+              color: var(--AMARELO);
+              background-color: var(--AMARELO);
+              border-radius: 100%;
+            }
+          }
+        }
+
+        .oferta__lote-preco {
+          margin-top: 2rem;
+          text-align: center;
+
+          .oferta__lote-preco-parcelado {
+            font-size: 1.2rem;
+
+            strong {
+              color: var(--VERDE);
+              font-weight: var(--FF-BLACK);
+
+              span {
+                font-size: 3rem;
+              }
+            }
+          }
+
+          .oferta__lote-preco-a-vista {
+          }
+        }
+      }
+
+      .oferta__lote-botao {
+        background-color: var(--ROXO);
+        text-align: center;
+        padding-block: 2rem;
+
+        a {
+          display: inline-block;
+          color: var(--BRANCO);
+          background-color: var(--VERDE);
+          padding: 1rem;
+          border-radius: var(--BORDER-RADIUS);
+          font-weight: var(--FF-BLACK);
+          text-transform: uppercase;
+        }
+        
+        &:not(.oferta__lote-botao--expirou,
+        .oferta__lote-botao--proximo-lote) {
+          a {
+            animation: pulse 2s ease-in infinite;
+            scale: 1.3;
+            transition: scale .2s;
+          }
+
+          a:hover {
+            opacity: .95;
+            scale: 1;
+          }
+        }
+      }
+
+      .oferta__lote-botao--expirou {
+        a {
+          background-color: var(--BG-BOTAO-EXPIROU);
+          opacity: .5;
+          cursor: not-allowed;
+        }
+
+      }
+      
+      .oferta__lote-botao--proximo-lote {
+        a {
+          background-color: var(--BG-BOTAO-EXPIROU);
+          opacity: .5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+/* ****************************** 
+SEÇÃO EDUZZ
+****************************** */
+.pagamento {
+  background-color: var(--LARANJA);
+  padding-block: 10rem;
+  color: var(--BRANCO);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: var(--FF-BLACK);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .eduzz {
+    margin-top: 2rem;
+    width: var(--WX);
+    padding-inline: var(--PX);
+  }
+}
+
+/* ****************************** 
+SEÇÃO EDUZZ
+****************************** */
+.pr {
+  padding-block: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  .pr_titulo {
+    padding-inline: var(--PX);
+    font-size: 3rem;
+    font-weight: var(--FF-BLACK);
+    color: var(--BG-BOTAO-EXPIROU);
+  }
+
+  .pr__lista {
+    margin-top: 2rem;
+    width: var(--WX);
+    padding-inline: var(--PX);
+
+    .pr__lista-item {
+      padding-block: 1rem;
+      .pr__pergunta {
+        font-weight: var(--FF-SEMI);
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+
+/* ****************************** 
+SEÇÃO RODAPÉ
+****************************** */
+.rodape {
+  background-color: var(--BG-BOTAO-EXPIROU);
+
+  padding-block: 5rem;
+  display: flex;
+  justify-content: center;
+  
+  .rodape__informacoes {
+    width: var(--WX);
+    
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 150px;
+    }
+  
+    a {
+      color: #fff;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* ****************************** 
+MEDIA QUERIES - MARCADORES
+****************************** */
+
+// 2XL
+@media screen and (min-width: 1401px) {
+  .marcador {
+    background-color: red !important;
+  }  
+}
+
+// XL
+@media screen and (max-width: 1400px) {
+  .marcador {
+    background-color: green !important;
+  }
+}
+
+// Large
+@media screen and (max-width: 1200px) {
+  .marcador {
+    background-color: blue !important;
+  }
+}
+
+// Medium 
+@media screen and (max-width: 992px) {
+  .marcador {
+    background-color: chartreuse !important;
+  }
+}
+
+// Small 
+@media screen and (max-width: 768px) {
+  .marcador {
+    background-color: coral !important;
+  }
+}
+
+// XS 
+@media screen and (max-width: 576px) {  
+  .marcador {
+    background-color: deeppink !important;
+  }
+}

@@ -1,12 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <head><meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tríade Estratégica 2.0</title>
+
+    <link rel="icon" type="image/svg+xml" href="/wp-content/uploads/2022/08/Favicon-Camila-Barah-2.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.scss">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5Q9S2BV");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <div id="app"></div>    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5Q9S2BV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <!--div class="marcador" style="width: 100%; height: 10px; background-color: #ccc; position: fixed; z-index: 999;"></div-->
+
+    <!-- ****************************** 
+    SEÇÃO CABEÇALHO
+    ****************************** -->
+    <header class="cabecalho">
+      <div class="cabecalho__centro">
+        <div class="cabecalho__caixa-titulo">
+          <img class="cabecalho__logo" src="Logo-Barah-Pag-vendas-Triade-2.png" alt="Logo Camila Barah" />
+
+          <h1 class="cabecalho__titulo">
+            <div class="cabecalho__titulo-linha">A Tríade <span class="cabecalho__titulo-20">2<small><span>.</span>0</small></span></div>            
+            <br />
+            <div class="cabecalho__titulo-linha">Estratégica</div>
+          </h1>
+  
+          <p class="cabecalho__subtitulo">
+            A Formação Avançada para o <strong>Social Media</strong> que já entendeu que Grandes Contratos precisam de estratégia.
+          </p>
+  
+          <a class="cabecalho__btn" href="#secao-cta">
+            <i class="ph-fill ph-arrow-fat-lines-right"></i>       
+            Quero Entrar
+          </a>
+        </div>        
+      </div>
+
+      <div class="cabecalho__degrade"></div>
+    </header>
+
+    <!-- ****************************** 
+    SEÇÃO CONTADOR
+    ****************************** -->
+    <section class="contador">
+      <div class="contador__caixa-contagem">
+        <div class="contador__descricao">
+          <p>Expira em</p>
+        </div>
+        <div class="contador__contagem">
+          <div class="contador__unidade">
+            <span class="contador__unidade-regressao" id="dia">
+              0
+            </span>
+            <span class="contador__unidade-descricao">
+              dias
+            </span>
+          </div>
+
+          <div class="contador__unidade">
+            <span class="contador__unidade-regressao" id="hora">
+              0
+            </span>
+            <span class="contador__unidade-descricao">
+              hrs
+            </span>
+          </div>
+
+          <div class="contador__unidade">
+            <span class="contador__unidade-regressao" id="minuto">
+              0
+            </span>
+            <span class="contador__unidade-descricao">
+              min
+            </span>
+          </div>
+
+          <div class="contador__unidade">
+            <span class="contador__unidade-regressao" id="segundo">
+              0
+            </span>
+            <span class="contador__unidade-descricao">
+              segs
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <main>
+      <!-- ****************************** 
+      SEÇÃO CARROSSEL (BENEFÍCIOS)
+      ****************************** -->
+      <section class="carrossel">
+        <div class="carrossel__painel">
+          <div class="carrossel__moldura">
+            <div class="carrossel__moldura-topo">
+              <img src="Foto-perfil-Camila-Barah-Pag-vendas-Triade-2.png" alt="" class="carrossel__moldura-foto">
+              <div>
+                <strong>camilabarah</strong>
+                <span>Tríade Estratégica</span>
+              </div>
+            </div>
+  
+            <img src="Carrossel-Slide-01-Pag-vendas-Triade-2.png" alt="Slide carrossel" class="carrossel__moldura-slide" id="slide"/>
+  
+            <div class="carrossel__moldura-rodape">
+              <p><strong>camilabarah</strong> Dá uma lida e assina pra gente poder começar, blz? :)))</p>
+            </div>
+            
+            <div class="setas">
+              <a href="#" class="seta seta--esquerda" id="slide-esquerdo" style="visibility: hidden;">
+                <i class="ph-fill ph-arrow-circle-left"></i>
+              </a>
+    
+              <a href="#" class="seta seta--direita" id="slide-direito">
+                <i class="ph-fill ph-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>        
+      </section>
+  
+  
+      <!-- ****************************** 
+      SEÇÃO O QUE É
+      ****************************** -->
+      <section class="oquee">
+        <div class="container">
+          <div class="oquee__caixa-descricao">
+            <h2 class="oquee__titulo">Tríade Estratégica</h2>
+            <div class="oquee__resumo">
+              <p>A Tríade é para quem ama ser Social Media, ama o que faz, e quer ir além do algoritmo... Quer aprender a criar estratégias do zero e fazer a diferença na vida dos clientes.</p>
+              <p>“Mas eu tô começando do zero, e quero ser um Tríader?” #SóVem É pra quem tá começando do zero também!</p>
+            </div>
+  
+            <h2 class="oquee__titulo">A Tríade é</h2>
+  
+            <div class="oquee__e">
+              <div class="oquee__e-isso">
+                <strong>Método</strong> <small>7 módulos (+40 aulas)</small>
+              </div>
+              <div class="oquee__e-isso">
+                <strong>Mentoria</strong> <small>quinzenais até dezembro de 2023</small>
+              </div>
+              <div class="oquee__e-isso">
+                <strong>Comunidade</strong> <small>Tríaders no Discord</small>
+              </div>
+            </div>
+          </div>
+  
+          <img src="Ilustracao-secao-o-que-e-Pag-vendas-Triade-2.png" alt="Ilustração" class="oquee__ilustracao">
+        </div>
+      </section>
+  
+      <!-- ****************************** 
+      SEÇÃO DEPOIMENTOS
+      ****************************** -->
+      <section class="triaders">
+        <div class="triaders__titulo">
+          <h2>Triaders <small>falando</small></h2>
+        </div>
+
+        <div class="triaders__depoimentos">
+          <div class="triaders__depoimento">
+            <img src="Depoimento-Chaiene-Luz-Triade-2.png" alt="Depoimento" id="depoimento"/>
+            
+            <div class="setas">
+              <a href="#" class="seta seta--esquerda" id="depoimento-esquerdo">
+                <i class="ph-fill ph-arrow-circle-left"></i>
+              </a>
+    
+              <a href="#" class="seta seta--direita" id="depoimento-direito">
+                <i class="ph-fill ph-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  
+      <!-- ****************************** 
+      SEÇÃO POR DENTRO
+      ****************************** -->
+      <section class="por-dentro">
+
+        <div class="por-dentro__titulo">
+          <img src="Ilustracao-secao-por-dentro-Pag-vendas-Triade-2.png" alt="Ilustração" class="por-dentro__ilustracao">
+          <h2>A Tríade <small>por dentro</small></h2>
+        </div>
+
+        <ul class="por-dentro__modulos" role="list">
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Módulo Tríade</h3>
+            <p class="por-dentro__modulo-descricao">Formação Avançada em Estratégia</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Identificação da personalidade da marca</li>
+              <li>Definição de nicho específico</li>
+              <li>Estudo de público mão na massa</li>
+              <li>Construção de posicionamento</li>
+              <li>Fundamentos do conteúdo estratégico</li>
+              <li>Construção de linha editorial avançada</li>
+            </ul>
+          </li>
+
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Módulo Tático</h3>
+            <p class="por-dentro__modulo-descricao">Planejamento de conteúdo na prática</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Planejamento de temas de conteúdo com IA</li>
+              <li>Construção do conteúdo avançado com IA</li>
+              <li>Análise de métricas</li>
+              <li>Táticas de ferramentas do instagram</li>
+            </ul>
+          </li>
+
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Módulo Operac.</h3>
+            <p class="por-dentro__modulo-descricao">Dia a dia hardcore do Social Media</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Copywriting</li>
+              <li>Design</li>
+              <li>Produção do conteúdo</li>
+              <li>Organização de demandas</li>
+            </ul>
+          </li>
+
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Módulo High</h3>
+            <p class="por-dentro__modulo-descricao">Crie processos inteligentes e que surpreendem o cliente hight ticket</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Quem são os clientes hight ticket</li>
+              <li>Como passar confiança para esse público</li>
+              <li>Construção de proposta comercial alto nível</li>
+              <li>Apresentação da estratégia ao cliente</li>
+              <li>Direcionamento geral para cada rede social</li>
+            </ul>
+          </li>
+
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Módulo Mentorias</h3>
+            <p class="por-dentro__modulo-descricao">As mentorias são para tirar dúvidas. Temas são livres e costumam focar em estratégia, conteúdo, ferramentas, prospecção e processos.</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Gravação de + de 10 encontros já disponíveis</li>
+              <li>Encontros quinzenais (durante 2023)</li>
+            </ul>
+          </li>
+
+          <li class="por-dentro__modulo">
+            <h3 class="por-dentro__modulo-nome">Comunidade Tríade</h3>
+            <p class="por-dentro__modulo-descricao">Um lugar pra chamar de seu e nunca mais caminhar sozinho. Passe pelo processo sendo apoiado por todos os Tríaders.</p>
+
+            <ul class="por-dentro__modulo-itens" role="list">
+              <li>Trocas</li>
+              <li>Parcerias</li>
+              <li>Dúvidas</li>
+              <li>Compartilhar ideias/insights/dificuldades</li>
+              <li>Um lugar pra conversas de alto nível</li>
+              <li>Você não estará sozinho na jornada</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+  
+      <!-- ****************************** 
+      SEÇÃO AUTORA
+      ****************************** -->
+      <section class="autora">
+        <div class="autora__sobre">
+          <div class="autora__sobre-foto">
+            <img
+              src="Autora-Camila-Barah-Detalhe-Amarelo-Pag-vendas-Triade-2.png"
+              alt="Autora da Série"
+            />
+          </div>
+          <div class="autora__sobre-resumo">
+            <h2 class="autora__sobre-citacao">
+              "Grandes Contratos Precisam de <strong>Estratégia</strong>!"
+            </h2>
+            <p class="autora__sobre-citacao-atribuicao">
+              Camila Barah, especialista em conteúdo estratégico no Instagram
+            </p>
+            <div class="autora__sobre-descricao">
+              <p>
+                Há mais de 15 anos trabalhando com marketing de conteúdo, hoje
+                ensino pessoas a se posicionarem no digital, a transmitir
+                confiabilidade para seus clientes e a CONSTRUIR ESTRATÉGIAS DE
+                CONTEÚDO com segurança para atrair as pessoas certas e fechar
+                Grandes Contratos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="autora__projetos">
+          <h2>Projetos que já participei</h2>
+          <img
+            src="Projetos-Camila-participou-Pag-vendas-Triade-2.png"
+            alt="Logomarca de empresas nas quais a Camila já prestou serviço."
+          />
+        </div>
+      </section>
+  
+      <!-- ****************************** 
+      SEÇÃO OFERTA
+      ****************************** -->
+      <section class="oferta">
+        <div class="oferta__titulo">
+          <h2>Ofertas Tríade <small>que nem story, expira rapidim.</small></h2>
+        </div>
+
+        <ul class="oferta__lotes" role="list">
+          <li class="oferta__lote">
+            <div class="oferta__lote-termino">
+              5 Primeiros
+            </div>
+
+            <div class="oferta__lote-detalhes">
+              <ul class="oferta__lote-itens-inclusos" role="list">
+                <li>Formação Tríade Completa</li>
+                <li class="oferta__lote-item-bonus">1h de Mentoria Individual Comigo</li>
+                <li class="oferta__lote-item-bonus">4 mentorias extras (posicionamento, perfil e venda de assessorias)</li>
+                <li class="oferta__lote-item-bonus">Sprint ChatGPT</li>
+                <li class="oferta__lote-item-bonus">Sprint Prospecção Estratégica</li>
+              </ul>
+
+              <div class="oferta__lote-preco">
+                <p class="oferta__lote-preco-parcelado">
+                  12x de <strong><span>R$ 129</span>,70</strong>
+                </p>
+                <p class="oferta__lote-preco-a-vista">
+                  ou R$1.297,00 à vista
+                </p>
+              </div>
+            </div>
+
+            <div class="oferta__lote-botao oferta__lote-botao--expirou">
+              <a href="#secao-cta" >
+                <i class="ph-fill ph-rocket-launch"></i>
+                Fazer Inscrição
+              </a>
+            </div>
+          </li>
+
+          <li class="oferta__lote">
+            <div class="oferta__lote-termino">
+              Até 21hs do dia 13/07
+            </div>
+
+            <div class="oferta__lote-detalhes">
+              <ul class="oferta__lote-itens-inclusos" role="list">
+                <li>Formação Tríade Completa</li>
+                <li class="oferta__lote-item-bonus">4 mentorias extras (posicionamento, perfil e venda de assessorias)</li>
+                <li class="oferta__lote-item-bonus">Sprint ChatGPT</li>
+                <li class="oferta__lote-item-bonus">Sprint Prospecção Estratégica</li>
+              </ul>
+
+              <div class="oferta__lote-preco">
+                <p class="oferta__lote-preco-parcelado">
+                  12x de <strong><span>R$ 129</span>,70</strong>
+                </p>
+                <p class="oferta__lote-preco-a-vista">
+                  ou R$1.297,00 à vista
+                </p>
+              </div>
+            </div>
+
+            <div class="oferta__lote-botao" id="dia13">
+              <a href="#secao-cta">
+                <i class="ph-fill ph-rocket-launch"></i>
+                Fazer Inscrição
+              </a>
+            </div>
+          </li>
+
+          <li class="oferta__lote">
+            <div class="oferta__lote-termino">
+              Até 21hs do dia 14/07
+            </div>
+
+            <div class="oferta__lote-detalhes">
+              <ul class="oferta__lote-itens-inclusos" role="list">
+                <li>Formação Tríade Completa</li>
+                <li class="oferta__lote-item-bonus">Sprint ChatGPT</li>
+                <li class="oferta__lote-item-bonus">Sprint Prospecção Estratégica</li>
+              </ul>
+
+              <div class="oferta__lote-preco">
+                <p class="oferta__lote-preco-parcelado">
+                  12x de <strong><span>R$ 129</span>,70</strong>
+                </p>
+                <p class="oferta__lote-preco-a-vista">
+                  ou R$1.297,00 à vista
+                </p>
+              </div>
+            </div>
+
+            <div class="oferta__lote-botao" id="dia14">
+              <a href="#secao-cta">
+                <i class="ph-fill ph-rocket-launch"></i>
+                Fazer Inscrição
+              </a>
+            </div>
+          </li>
+
+          <li class="oferta__lote">
+            <div class="oferta__lote-termino">
+              Até 21hs do dia 15/07
+            </div>
+
+            <div class="oferta__lote-detalhes">
+              <ul class="oferta__lote-itens-inclusos" role="list">
+                <li>Formação Tríade Completa</li>
+                <li class="oferta__lote-item-bonus">Sprint Prospecção Estratégica</li>
+              </ul>
+
+              <div class="oferta__lote-preco">
+                <p class="oferta__lote-preco-parcelado">
+                  12x de <strong><span>R$ 129</span>,70</strong>
+                </p>
+                <p class="oferta__lote-preco-a-vista">
+                  ou R$1.297,00 à vista
+                </p>
+              </div>
+            </div>
+
+            <div class="oferta__lote-botao" id="dia15">
+              <a href="#secao-cta" >
+                <i class="ph-fill ph-rocket-launch"></i>
+                Fazer Inscrição
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+  
+      <!-- ****************************** 
+      SEÇÃO EDUZZ
+      ****************************** -->
+      <section class="pagamento">
+        <h2 id="secao-cta">Faça sua inscrição!</h2>
+        <p>Preencha o formulário abaixo.</p>
+
+        <div class="eduzz">
+          <!-- Código da Eduzz aqui. -->
+          <div id="elements"></div>
+          <script src="https://cdn.eduzzcdn.com/sun/bridge/bridge.js"></script>
+          <script>
+            (function () {
+              const load = function () {
+                  window.Eduzz.Checkout.init({
+                    contentId: 1998350,
+                    target: "elements",
+                    errorCover: false
+                  });
+              }
+              if (document.readyState === 'complete') {
+                  load();
+                  return;
+              }
+              window.addEventListener('load', load);
+            })();
+          </script>
+        </div>
+      </section>
+    </main>
+
+    <section class="pr">
+      <h2 class="pr_titulo">
+        Perguntas & Respostas
+      </h2>
+
+      <div class="pr__lista">
+        <div class="pr__lista-item">
+          <p class="pr__pergunta">
+            Qual a duração do acesso à plataforma?
+          </p>
+          <p class="pr__resposta">
+            Você tem 1 ano de acesso à plataforma de alunos. Tempo mais que suficiente para ver e rever as aulas várias vezes.
+          </p>
+        </div>
+
+        <div class="pr__lista-item">
+          <p class="pr__pergunta">
+            Quero começar agora na profissão, a Tríade é pra mim?
+          </p>
+          <p class="pr__resposta">
+            Antes não era. Porque a Tríade tinha apenas a parte mais avançada, ou seja, a Estratégia. Mas agora, na Tríade 2.0, isso mudou! Sim, agora a Tríade é pra você que está começando também. Temos tanto a parte estratégica, quanto a tática e operacional. Uhul!
+          </p>
+        </div>
+
+        <div class="pr__lista-item">
+          <p class="pr__pergunta">
+            Tem parcelamento inteligente?
+          </p>
+          <p class="pr__resposta">
+            Infelizmente ainda não temos o parcelamento com recorrência. Mas é possível parcelar usando mais de um cartão.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ****************************** 
+    SEÇÃO RODAPÉ
+    ****************************** -->
+    <footer class="rodape">
+      <div class="rodape__informacoes">
+        <p>
+          <img src="Logo-Barah-Pag-vendas-Triade-2.png" alt="Logomarca" />
+        </p>
+        <p>
+          Este site não faz parte e nem é endossado pelo Google ou Facebook em
+          qualquer aspecto. Google, Facebook e Instagram são marcas comerciais
+          com todos os direitos reservados. Este produto não garante a obtenção
+          de resultados. Qualquer referência ao desempenho de uma estratégia não
+          deve ser interpretada como uma garantia de resultados.
+        </p>
+        <p>E-mail: contato@camilabarah.com.br</p>
+        <p>&copy; Camila Barah - Todos os direitos reservados.</p>
+        <p>
+          <a href="/politica-de-privacidade" target="_blank"
+            >Política de Privacidade</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
